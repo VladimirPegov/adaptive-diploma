@@ -269,15 +269,12 @@ body {
 }
 
 .post-header-tags {
+  list-style-type: none;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
-}
-
-.header-tag {
-  list-style-type: none;
 }
 
 .post-header > h4 {
@@ -336,16 +333,13 @@ body {
 }
 
 .tags-header {
+  list-style-type: none;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 7px;
-}
-
-.tag {
-  list-style-type: none;
 }
 
 .tag:nth-child(n+2) {
