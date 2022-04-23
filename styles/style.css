@@ -8,8 +8,26 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Open Sans, sans-serif;
+  font-family: "OpenSans-Regular";
   letter-spacing: -0.5px;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: local("OpenSans-Regular"), url(../fonts/OpenSans-Regular.ttf) format(ttf);
+  src: local("OpenSans-Regular"), url(../fonts/OpenSans-Regular.woff) format(woff);
+  src: local("OpenSans-Regular"), url(../fonts/OpenSans-Regular.woff2) format(woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.ttf) format(ttf);
+  src: local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.woff) format(woff);
+  src: local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.woff2) format(woff2);
+  font-weight: 700;
+  font-style: normal;
 }
 
 /*body::after {
@@ -138,8 +156,6 @@ body {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -197,7 +213,7 @@ body {
   padding: 20px;
   z-index: 1;
   background-image: url('../img/trend1.jpg');
-  max-width: 24.9%;
+  width: 24.9%;
 }
 
 @media (min-width: 2100px) {
@@ -253,9 +269,19 @@ body {
 }
 
 .post-header-tags {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
+}
 
+.post-header > h4 {
+  font-size: 1.5em;
+}
+
+.header-tag-link {
   font-family: inherit;
   font-size: 14px;
   font-weight: bold;
@@ -263,15 +289,16 @@ body {
   text-transform: uppercase;
 }
 
-.post-header > h2 {
-  display: block;
-  color: #eeee;
-  margin-top: 10px;
-}
-
 .header-tag:nth-child(n+2) {
   margin-left: 20px;
 
+}
+
+.post-header-value > a {
+  display: block;
+  color: #eeee;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .main-content {
@@ -305,21 +332,25 @@ body {
 }
 
 .tags-header {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: bold;
-  color: #b59f5b;
-  text-transform: uppercase; 
-
   margin-bottom: 7px;
 }
 
 .tag:nth-child(n+2) {
   margin-left: 24px;
+}
+
+.tag-link {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b59f5b;
+  text-transform: uppercase; 
 }
 
 .name-note-range-header {
@@ -626,9 +657,11 @@ body {
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 65px;  
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 15px 0;  
+  width: 1200px;
+  margin: 0 auto; 
+  padding: 0 15px 0;
+
+  box-sizing: border-box;
 }
 
 .page-title {
@@ -741,6 +774,7 @@ body {
 
 .product-price {
   font-family: "OpenSans-Bold", Arial, sans-serif;
+  font-weight: bold;
 }
 
 .old-price {
